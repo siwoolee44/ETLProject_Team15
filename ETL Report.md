@@ -7,7 +7,7 @@ To extract, transform and load FIFA World Cup datasets of countries, matches and
 
 
 Extract:
-We located the FIFA World Cup datasets from Kaggle formatted as three CSV files. The datasets show all related key information about the World Cup matches dating back to the 1930 tournament, results of match winners and the players and countries involved. With this FIFA World Cup datasets, we wanted to merge it with socioeconomic information to analyze if country economic factors have any effect on their match performance. This socioeconomic dataset was also found in Kaggle.
+We located the FIFA World Cup datasets from Kaggle formatted as three CSV files. The datasets show all related key information about the World Cup matches dating back to the 1930 tournament, results of match winners and the players and countries involved. With this FIFA World Cup datasets, we wanted to merge it with socioeconomic information to analyze if country economic factors have any effect on their match performance. This socioeconomic dataset was also found in Kaggle. For both datasets, to properly read the data into a pandas dataframe, we had to update the encoding for all CSV files to ISO-8859-1.
 
 Transform:
 For the FIFA World Cup datasets, we filtered and cleaned up the data using pandas by setting the three CSV files into dataframes to easily read the data and select which column tables to use. We made sure that key column tables: MatchID, Home/Away Team Names and Player Names were included so that the user can perform join queries between the tables loaded in MySQL. Additionally, we cleaned up the data by dropping the null values to avoid loading unnecessary data into MySQL.
